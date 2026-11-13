@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Arslan</title>
+<meta name="description" content="Muhammad Arslan — MS student, Data Intelligence & Applications Lab, Inha University. Research on retrieval-augmented LLMs for safer clinical decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fbfaf7; --surface:#ffffff; --ink:#1d1f23; --muted:#5d6470; --line:#e6e3dc;
+    --accent:#1f5fa8; --accent-soft:#e8f0fa; --tag:#f1efe9;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#14161a; --surface:#1b1e23; --ink:#e9e7e2; --muted:#a3a9b3; --line:#2c3038;
+      --accent:#7fb0ea; --accent-soft:#1f2a38; --tag:#23272e; }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:56px 16px 72px}
+  header{display:grid;grid-template-columns:150px 1fr;gap:32px;align-items:center;padding-bottom:36px;border-bottom:1px solid var(--line)}
+  .avatar{width:150px;height:150px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;
+    font:600 46px "Source Serif 4",Georgia,serif;color:var(--accent);overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover}
+  h1{font:600 2.3rem/1.15 "Source Serif 4",Georgia,serif;margin:0 0 6px;letter-spacing:-.01em}
+  .role{color:var(--muted);margin:0 0 14px}
+  .links{display:flex;flex-wrap:wrap;gap:8px}
+  .links a{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 14px;font-size:.88rem;color:var(--ink)}
+  .links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+  section{padding:34px 0 6px}
+  h2{font:600 1.35rem "Source Serif 4",Georgia,serif;margin:0 0 14px}
+  p{margin:0 0 12px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+  .tags span{background:var(--tag);border-radius:6px;padding:3px 10px;font-size:.85rem;color:var(--muted)}
+  .item{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-bottom:14px}
+  .item h3{margin:0 0 4px;font:600 1.05rem/1.4 "Source Serif 4",Georgia,serif}
+  .meta{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:5px;padding:1px 8px;font-size:.78rem;font-weight:600;margin-left:6px;vertical-align:middle}
+  ul.clean{list-style:none;padding:0;margin:0}
+  ul.clean li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:8px 0;border-bottom:1px dashed var(--line)}
+  ul.clean li:last-child{border-bottom:0}
+  .when{color:var(--muted);font-size:.9rem}
+  footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+  @media (max-width:640px){
+    .wrap{padding-top:36px}
+    header{grid-template-columns:1fr;text-align:left;gap:18px}
+    .avatar{width:110px;height:110px;font-size:34px}
+    h1{font-size:1.9rem}
+    ul.clean li{grid-template-columns:1fr;gap:2px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="avatar" aria-label="Photo of Muhammad Arslan">MA<!-- To add a photo: upload photo.jpg to this repository and replace "MA" with <img src="photo.jpg" alt="Muhammad Arslan"> --></div>
+  <div>
+    <h1>Muhammad Arslan</h1>
+    <p class="role">MS Student · Data Intelligence &amp; Applications Lab, Inha University, Incheon, South Korea<br>
+    Advisor: Prof. Jungeun Kim</p>
+    <div class="links">
+      <a href="mailto:786786a@inha.edu">Email</a>
+      <a href="https://github.com/arslan786786">GitHub</a>
+      <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> -->
+      <!-- <a href="cv.pdf">CV</a> -->
+      <a href="https://codewitharslan.com">Website</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I study how large language models can support medication-safety decisions without trusting outdated patient information. My current work asks a simple question: is each patient fact in the record still valid at the moment a decision is made? I build retrieval-augmented systems that check this before answering, and that ask for a missing value, retrieve more evidence, or escalate to a pharmacist when answering would be unsafe.</p>
+  <div class="tags">
+    <span>Retrieval-augmented generation</span><span>Large language models</span><span>Clinical decision support</span>
+    <span>Medication safety</span><span>Electronic health records</span><span>Trustworthy AI</span>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research</h2>
+  <div class="item">
+    <h3>Present but Outdated: Validity-Aware Retrieval-Augmented Generation for Safer Medication Decisions from Longitudinal Patient Records <span class="badge">Under review</span></h3>
+    <p class="meta">Muhammad Arslan, Jungeun Kim</p>
+    <p>SafeClin-RAG checks whether every patient fact is still valid before answering a medication question, and chooses to answer, ask, retrieve or abstain. We also built MedAct-Bench, a benchmark from real NSAID orders with paired temporal traps and controls, evaluated on MIMIC-IV and hospital data.</p>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul class="clean">
+    <li><span class="when">Current</span><span><strong>MS</strong>, Inha University, Incheon, South Korea<br><span class="when">Data Intelligence &amp; Applications Lab · Advisor: Prof. Jungeun Kim</span></span></li>
+    <!-- Add your BS here, e.g.:
+    <li><span class="when">20XX – 20XX</span><span><strong>BS in …</strong>, University name, Pakistan</span></li> -->
+  </ul>
+</section>
+
+<footer>
+  Last updated November 2026
+</footer>
+
+</div>
+</body>
+</html>

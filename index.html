@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Muhammad Arslan</title>
 <meta name="description" content="Muhammad Arslan — MS student, Data Intelligence & Applications Lab, Inha University. Research on retrieval-augmented LLMs for safer clinical decisions.">
-<link rel="icon" href="https://github.com/arslan786786.png">
+<link rel="icon" href="photo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -81,9 +81,19 @@
 
   .timeline{position:relative;margin:0;padding:0 0 0 22px;list-style:none}
   .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;background:var(--line)}
-  .timeline li{position:relative;padding:4px 0 16px}
-  .timeline li::before{content:"";position:absolute;left:-22px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+  .timeline>li{position:relative;padding:4px 0 16px}
+  .timeline>li::before{content:"";position:absolute;left:-22px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
   .when{color:var(--muted);font-size:.9rem}
+  .job{position:relative;padding:4px 0 18px}
+  .job h3{margin:0;font:600 1.03rem/1.4 "Source Serif 4",Georgia,serif}
+  .job .org{color:var(--accent);font-weight:500}
+  .job ul{margin:6px 0 0;padding-left:18px;color:var(--ink);list-style:disc}
+  .job li{margin:2px 0}
+  .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .skill{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:transform .25s ease,box-shadow .25s ease}
+  .skill:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .skill b{display:block;font-size:.9rem;margin-bottom:4px}
+  .skill span{color:var(--muted);font-size:.88rem}
 
   footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
@@ -114,6 +124,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
     </ul>
   </div>
@@ -122,13 +133,14 @@
 <div class="wrap">
 
 <header>
-  <div class="avatar reveal"><img src="https://github.com/arslan786786.png?size=400" alt="Muhammad Arslan" onerror="this.outerHTML='&lt;div class=&quot;ini&quot;&gt;MA&lt;/div&gt;'"></div>
+  <div class="avatar reveal"><img src="photo.jpg" alt="Muhammad Arslan" onerror="this.outerHTML='&lt;div class=&quot;ini&quot;&gt;MA&lt;/div&gt;'"></div>
   <div class="reveal">
     <h1>Muhammad <span class="grad">Arslan</span></h1>
     <p class="role">MS Student · Data Intelligence &amp; Applications Lab, Inha University, Incheon, South Korea<br>
     Advisor: Prof. Jungeun Kim</p>
     <div class="links">
       <a href="mailto:786786a@inha.edu">Email</a>
+      <a href="https://www.linkedin.com/in/muhammad-arslan-b591b1285/">LinkedIn</a>
       <a href="https://github.com/arslan786786">GitHub</a>
       <!-- <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a> -->
       <!-- <a href="cv.pdf">CV</a> -->
@@ -142,7 +154,8 @@
   <p>I study how large language models can support medication-safety decisions without trusting outdated patient information. My current work asks a simple question: is each patient fact in the record still valid at the moment a decision is made? I build retrieval-augmented systems that check this before answering, and that ask for a missing value, retrieve more evidence, or escalate to a pharmacist when answering would be unsafe.</p>
   <div class="tags">
     <span>Retrieval-augmented generation</span><span>Large language models</span><span>Clinical decision support</span>
-    <span>Medication safety</span><span>Electronic health records</span><span>Trustworthy AI</span>
+    <span>Medication safety</span><span>Electronic health records</span><span>AI agents</span>
+    <span>Federated learning</span><span>Computer vision</span><span>Trustworthy AI</span>
   </div>
 </section>
 
@@ -155,10 +168,75 @@
   </div>
 </section>
 
+<section id="experience" class="reveal">
+  <h2>Experience</h2>
+  <ul class="timeline">
+    <li class="job">
+      <span class="when">Sep 2026 – Present · Incheon, South Korea</span>
+      <h3>Graduate Researcher, LLMs &amp; Medical AI · <span class="org">Inha University (DIA Lab)</span></h3>
+      <ul>
+        <li>Retrieval-augmented generation for evidence-grounded medical question answering</li>
+        <li>Agentic AI workflows with human-in-the-loop oversight</li>
+        <li>Federated learning for privacy-preserving training across institutions</li>
+        <li>Multimodal and computer-vision models for medical data</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Mar 2023 – Present · Remote</span>
+      <h3>AI/ML Engineer (Freelance) · <span class="org">Upwork</span></h3>
+      <ul>
+        <li>Designed and deployed AI workflow-automation agents with Python, n8n and LangChain</li>
+        <li>Fine-tuned transformer-based LLMs for domain-specific use cases</li>
+        <li>Built cloud applications on AWS (EC2, Lambda, S3, SageMaker) with CI/CD via GitHub Actions and Docker</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Jan 2023 – Oct 2023 · Remote</span>
+      <h3>Senior Machine Learning Engineer · <span class="org">UTech</span></h3>
+      <ul>
+        <li>Trained ML models for classification, regression and clustering (scikit-learn, PyTorch, TensorFlow)</li>
+        <li>Fine-tuned and deployed GPT- and BERT-style models for generation, summarisation and Q&amp;A</li>
+        <li>Built data pipelines with Pandas, NumPy and MLflow; deployed models on AWS SageMaker</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Feb 2022 – Jun 2025 · Remote</span>
+      <h3>Project Manager · <span class="org">Freelance Insider</span></h3>
+      <ul>
+        <li>Managed software-engineering projects and led machine-learning and LLM initiatives</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Jan 2022 – Jun 2025 · Remote</span>
+      <h3>Data Scientist · <span class="org">Freelance</span></h3>
+      <ul>
+        <li>Built machine-learning models and APIs to bring them into existing systems</li>
+      </ul>
+    </li>
+    <li class="job">
+      <span class="when">Jan 2020 – Jan 2023 · Remote</span>
+      <h3>Python Developer · <span class="org">Upwork</span></h3>
+      <ul>
+        <li>Built automation scripts, web-scraping tools and Flask/Django back ends with third-party API integrations</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill"><b>Machine learning</b><span>PyTorch, TensorFlow, scikit-learn, Hugging Face Transformers</span></div>
+    <div class="skill"><b>LLMs &amp; agents</b><span>RAG, fine-tuning (LoRA/QLoRA), LangChain, n8n</span></div>
+    <div class="skill"><b>Cloud &amp; MLOps</b><span>AWS (EC2, Lambda, S3, SageMaker), Docker, GitHub Actions, MLflow</span></div>
+    <div class="skill"><b>Data</b><span>Python, Pandas, NumPy, PostgreSQL, MongoDB, MySQL</span></div>
+  </div>
+</section>
+
 <section id="education" class="reveal">
   <h2>Education</h2>
   <ul class="timeline">
-    <li><span class="when">Current</span><br><strong>MS</strong>, Inha University, Incheon, South Korea<br><span class="when">Data Intelligence &amp; Applications Lab · Advisor: Prof. Jungeun Kim</span></li>
+    <li><span class="when">Sep 2026 – Present</span><br><strong>MS</strong>, Inha University, Incheon, South Korea<br><span class="when">Data Intelligence &amp; Applications Lab · Advisor: Prof. Jungeun Kim</span></li>
     <!-- Add your BS here, e.g.:
     <li><span class="when">20XX – 20XX</span><br><strong>BS in …</strong>, University name, Pakistan</li> -->
   </ul>

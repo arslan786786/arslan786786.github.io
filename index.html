@@ -94,6 +94,15 @@
   .skill:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
   .skill b{display:block;font-size:.9rem;margin-bottom:4px}
   .skill span{color:var(--muted);font-size:.88rem}
+  .interests{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+  .int{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .int::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+  .int:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+  .int:hover::before{transform:scaleX(1)}
+  .int .em{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:10px}
+  .int .em svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .int h3{margin:0 0 6px;font:600 1.02rem/1.35 "Source Serif 4",Georgia,serif}
+  .int p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.55}
   .certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
   .cert{display:flex;gap:12px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;color:var(--ink);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
   .cert:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent);text-decoration:none}
@@ -113,7 +122,10 @@
     .reveal{opacity:1;transform:none}
   }
   @media (max-width:640px){
-    nav ul{gap:12px;font-size:.85rem}
+    nav .brand{display:none}
+    nav .in{padding:10px 16px}
+    nav ul{gap:14px;font-size:.85rem;overflow-x:auto;white-space:nowrap;scrollbar-width:none;width:100%}
+    nav ul::-webkit-scrollbar{display:none}
     .wrap{padding-top:32px}
     header{grid-template-columns:1fr;gap:22px}
     .avatar{width:120px;height:120px}
@@ -129,6 +141,7 @@
     <a class="brand" href="#">M. Arslan</a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#interests">Interests</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education</a></li>
@@ -159,10 +172,17 @@
 <section id="about" class="reveal">
   <h2>About</h2>
   <p>I study how large language models can support medication-safety decisions without trusting outdated patient information. My current work asks a simple question: is each patient fact in the record still valid at the moment a decision is made? I build retrieval-augmented systems that check this before answering, and that ask for a missing value, retrieve more evidence, or escalate to a pharmacist when answering would be unsafe.</p>
-  <div class="tags">
-    <span>Retrieval-augmented generation</span><span>Large language models</span><span>Clinical decision support</span>
-    <span>Medication safety</span><span>Electronic health records</span><span>AI agents</span>
-    <span>Federated learning</span><span>Computer vision</span><span>Trustworthy AI</span>
+</section>
+
+<section id="interests" class="reveal">
+  <h2>Research Interests</h2>
+  <div class="interests">
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11a3 3 0 0 1 3 3v11H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 13h4"/><circle cx="18" cy="18" r="3"/><path d="m20.2 20.2 1.8 1.8"/></svg></div><h3>Retrieval-augmented generation for medicine</h3><p>Grounding LLM answers in clinical guidelines, drug labels and patient records, with evidence the clinician can check.</p></div>
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Trustworthy and safe LLMs</h3><p>Knowing when not to answer: checking that facts are valid, asking for missing information, and abstaining or escalating when unsure.</p></div>
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>Clinical NLP and temporal reasoning</h3><p>Reasoning over longitudinal electronic health records, where the timing of labs, drugs and events changes what is true today.</p></div>
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01M9 16h6"/></svg></div><h3>AI agents with human oversight</h3><p>Agentic workflows that plan, retrieve and act, while keeping a human in the loop for decisions that affect patients.</p></div>
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Federated and privacy-preserving learning</h3><p>Training models across hospitals without moving patient data, so sensitive records stay where they belong.</p></div>
+    <div class="int"><div class="em"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Medical computer vision and multimodal AI</h3><p>Combining images, text and structured data for diagnosis support and richer clinical understanding.</p></div>
   </div>
 </section>
 
